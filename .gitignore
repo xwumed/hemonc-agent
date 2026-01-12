@@ -12,3 +12,5 @@
 
 # 排除特定的文件
 zhipu.py
+renamepdf.py
+renametxt.py
