@@ -3,7 +3,7 @@ import asyncio
 import sys
 import time
 from logging_setup import setup_logging
-from agentv8 import initialize_or_update
+from agent import initialize_or_update
 from collections import defaultdict
 
 class Tee:
