@@ -17,3 +17,5 @@ renametxt.py
 update_dbname.py
 xml_to_text_esmo.py
 xml_to_text.py
+extract_esmo_figures.py
+extract_nccn.py
