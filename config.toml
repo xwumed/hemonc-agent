@@ -1,0 +1,66 @@
+# Global LLM configuration
+[openai_gpt5_1]
+model_name = "gpt-5.2"        # The LLM model to use
+max_tokens = 256                          # Maximum number of tokens in the response
+timeout=300
+reasoning_effort = "none"
+reasoning_verbosity = "low"
+env_prefix = "OPENAI"
+
+[openai_gpt4o]
+model_name = "gpt-4o"        # The LLM model to use
+max_tokens = 4096                          # Maximum number of tokens in the response
+timeout=300
+reasoning_effort = "minimal"
+reasoning_verbosity = "low"
+env_prefix = "OPENAI"
+
+[local_llama]
+model_name = "Llama-4-Maverick-17B-128E-Instruct-FP8"
+max_tokens = 256   #llama
+temperature = 0.05
+timeout = 300 
+env_prefix = "LOCAL"
+
+[local_gpt]
+model_name = "GPT-OSS-120B"
+max_tokens = 4096   # 增加token限制以支持长输出
+temperature = 0.05
+timeout = 300 
+env_prefix = "LOCAL"
+
+[embedding]
+model_name = "Qwen3-Embedding-8B"# The LLM model to use
+#max_tokens = 24000 # qwen
+temperature = 0.0
+timeout = 300
+env_prefix = "LOCAL"
+
+[reranker]
+model_name = "Qwen3-Reranker-8B"# The LLM model to use
+env_prefix = "RERANKER"
+
+# Paths configuration
+# All paths are relative to the directory where config_manager.py is located
+[paths]
+# Storage directories for PDFs
+esmo_storage = "ESMO"
+nccn_storage = "NCCN"
+hema_storage = "HEMA"
+
+# ChromaDB storage directories
+esmo_db_storage = "ESMO_chroma_db_qwen"
+nccn_db_storage = "NCCN_chroma_db_qwen"
+hema_db_storage = "HEMA_chroma_db_qwen"
+
+# Data directories
+uicc_dir = "UICC/TRANS0717"
+who_dir = "WHOchap"
+patho_dir = "patho"
+xml2txt_esmo_dir = "xml2txt_outputv2esmo"
+xml2txt_hemaguide_dir = "xml2txt_hemaguidev2"
+figure_txt_dir = "figure_txtv2"
+patho_db_storage = "patho_chroma_db_qwen"
+who_db_storage = "who_chroma_db_qwen"
+uicc_db_storage = "uicc_chroma_db_qwen0717"
+pubmed_issn = "pubmed/issn_new.txt"
